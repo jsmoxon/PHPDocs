@@ -59,7 +59,7 @@ curl.cainfo = c:\ca-bundle.crt
 ```
 5. Save and close the PHP.ini file.
 
-###Setting up Sausage
+###Setting up Sausage on Windows
 Sausage is a PHP framework that you can use with the Sauce Labs REST API. It is a set of classes and libraries that make it easy for you to run Selenium tests, either locally or on Sauce Labs. Sausage offers many additional features for free, like automatic pass/fail reporting. While we don’t recommend any specific 3rd party library, we’ve used Sausage for our samples as an easy reference. 
 
 Sausage comes bundled with Paratest (for running your tests in parallel) and optionally Sauce Connect (for testing locally-hosted sites with Sauce).
@@ -78,6 +78,20 @@ This downloads Sausage and all its dependences (PHPUnit for instance). The Sausa
 We also recommend using Sausage as your PHP framework if you’re running on Windows. This framework contains classes and libraries that are designed to work with the Sauce Labs API. It provides a convenient user interface and other features for managing your test results. For more information about how to set up and use Sausage, see [Sausage Documentation](http://github.com/jlipps/sausage).
 
 We also recommend that you use Sauce Connect if you plan to test locally or behind a firewall. For more information, see [Sauce Connect documentation](https://docs.saucelabs.com/reference/sauce-connect/).
+
+###Setting up Sausage on Mac/Linux
+1. Create your project directory using the following command.
+```
+mkdir ~/sauce-tutorial && cd ~/sauce-tutorial
+```
+2. Use the following curl command to download and install Sausage using your username and your Sauce access key.
+```
+curl -s https://raw.githubusercontent.com/jlipps/sausage-bun/master/givememysausage.php |
+SAUCE_USERNAME=YOUR_USERNAME SAUCE_ACCESS_KEY=YOUR_ACCESS_KEY php
+
+```
+
+This downloads Sausage on the respective operating system.
 
 ##Quick Start
 Now that you have PHP and Sausage in place, let's try running a simple test to make sure that everything works.
